@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Digital Profile</title>
+
+
+<html>
+    <body>
+
+        <div class="container">
+            <!-- Profile Header -->
+            <img src="citlali.jpg" alt="My Profile Picture" class="profile-pic">
+            <h1><span class="reverse">N</span>e<span class="reverse">r</span>o Tech</h1>
+            <p>Tech Enthusiast</p>
+    
+            <div class="nav-links">
+                
+                <!-- BUTTON 1: ABOUT ME -->
+                <div class="dropdown-item">
+                    <button class="btn">About Me</button>
+                    <div class="dropdown-content">
+                        <p class="card-text">
+                            Hi, I'm <strong class="highlight">Nero</strong>! I am an aspiring developer with a deep curiosity for building clean, functional, and secure digital experiences.
+                        </p>
+                        <p class="card-text">
+                            Right now, I am actively leveling up my skills by diving into <span class="badge">JavaScript, HTML and CSS</span>, building responsive web apps, and exploring <span class="badge">Game development</span>.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- BUTTON 2: SOCIALS -->
+                <div class="dropdown-item">
+                    <button class="btn">Socials</button>
+                    <div class="dropdown-content">
+                        <div class="social-links">
+                            <a href="https://github.com/Nerochizuu" target="_blank" class="social-btn">GitHub</a>
+                            <a href="https://x.com/024nerochii" target="_blank" class="social-btn">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- BUTTON 3: GOALS -->
+                <div class="dropdown-item">
+                    <button class="btn">Goals</button>
+                    <div class="dropdown-content">
+                        <ul class="goal-list">
+                            <li>Develop a game</li>
+                            <li>Learn more programming languages</li>
+                            <li>Code without AI help</li>
+                            <li>Study the basics and fundamentals of AI</li>
+                            <li>Create an AI similar to Fairy in Zenless Zone Zero</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- BUTTON 4: PROJECTS -->
+                <div class="dropdown-item">
+                    <button class="btn">Projects</button>
+                    <div class="dropdown-content">
+                        <p class="card-text">Portfolio coming soon. Stay tuned for some awesome interactive apps!</p>
+                    </div>
+                </div>
+    
+                <!-- BUTTON 5: QUOTES -->
+                <div class="dropdown-item">
+                    <button class="btn">Quotes</button>
+                    <div class="dropdown-content">
+                        <p class="card-text"><em>"Be like the bee who visits different flowers and taste the sweetness of each."</em></p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <!-- This handles the open/close logic -->
+        <script>
+            const buttons = document.querySelectorAll('.btn');
+    
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const parent = this.parentElement;
+    
+                    parent.classList.toggle('active');
+                    content.classList.toggle('active');
+                });
+            });
+        </script>
+    
+    </body>
+</html>

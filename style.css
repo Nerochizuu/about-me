@@ -1,0 +1,223 @@
+
+body {
+    font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+    background: repeating-linear-gradient(
+        -45deg,
+        #DC0A0A,
+        #DC0A0A 30px,
+        #b30606 30px,
+        #b30606 60px
+    );
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 40px 20px;      
+    min-height: 100vh;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    box-sizing: border-box;  
+}
+
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: #000000;
+    border: 5px solid #FFFFFF;
+    
+    /* Softer bottom angles to make sure the lowest dropdown has room */
+    clip-path: polygon(1% 2%, 99% 0%, 98% 99%, 1% 98%);
+    box-shadow: 12px 12px 0 #FFFFFF;
+    box-sizing: border-box;
+}
+
+
+.profile-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 5px solid #FFFFFF;
+    margin: 0 auto 10px auto;
+    object-fit: cover;
+    display: block;
+    transform: rotate(-3deg); 
+}
+
+
+h1 {
+    font-size: 38px;
+    color: #FFFFFF;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    transform: skew(-8deg) rotate(-1deg);
+}
+
+h1 .reverse {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 0 10px;
+    display: inline-block;
+    transform: rotate(-5deg) skew(5deg);
+    margin: 0 2px;
+}
+
+p {
+    color: #DC0A0A;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    transform: skew(-5deg);
+}
+
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dropdown-item {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    padding: 18px;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    
+    clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+    transition: all 0.15s ease-in-out;
+}
+
+/* Hover animation */
+.btn:hover {
+    background-color: #DC0A0A;
+    color: #FFFFFF;
+    transform: scale(1.02);
+}
+
+/* If the item is active, keep the button styled red */
+.dropdown-item.active .btn {
+    background-color: #DC0A0A;
+    color: #FFFFFF;
+    clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 3% 100%);
+}
+
+/*Dropdown Content*/
+.dropdown-content {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out, padding 0.3s ease; 
+    background-color: #111111;
+    border: 0px solid #FFFFFF;
+    padding: 0 20px; 
+    transform: rotate(-1deg);
+    margin-top: -5px; 
+}
+
+/*Dropdown Content*/
+.dropdown-content.active {
+    max-height: 350px; 
+    padding: 20px; 
+    border: 3px solid #FFFFFF;
+    box-shadow: -6px 6px 0 #DC0A0A;
+}
+
+/*Text & Badges inside Dropdown*/
+.card-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #EEEEEE;
+    margin: 0 0 12px 0;
+}
+
+.card-text:last-child {
+    margin-bottom: 0; 
+}
+
+.highlight {
+    color: #DC0A0A;
+    font-weight: 900;
+}
+
+.badge {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 2px 6px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+
+/* Mini buttons inside Socials */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    flex: 1;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+.social-btn:hover {
+    background-color: #DC0A0A;
+    color: #FFFFFF;
+}
+
+
+.goal-list {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.goal-list li {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.4;
+}
+
+
+.goal-list li::before {
+    content: "★"; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #DC0A0A; 
+    font-size: 16px;
+    transform: rotate(-10deg); 
+}
